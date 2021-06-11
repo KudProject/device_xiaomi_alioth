@@ -2,6 +2,8 @@
 // Copyright (C) 2021 KudProject Development
 // SPDX-License-Identifier: Apache-2.0
 
+#include <sys/sysinfo.h>
+
 #include <libinit_kona.h>
 
 static const variant_info_t alioth_info = {
@@ -49,7 +51,42 @@ static const std::vector<variant_info_t> variants = {
     aliothin_info,
 };
 
+static void load_dalvik_heap_properties()
+{
+    struct sysinfo sys;
+    char const *start_size, *growth_limit, *target_utilization, *max_free;
+
+    sysinfo(&sys);
+    if (sys.totalram > 8192ull * 1024 * 1024) {
+        // phone-xhdpi-12288-dalvik-heap.mk
+        start_size = "24m";
+        growth_limit = "384m";
+        target_utilization = "0.42";
+        max_free = "56m";
+    } else if (sys.totalram > 6144ull * 1024 * 1024) {
+        // phone-xhdpi-8192-dalvik-heap.mk
+        start_size = "24m";
+        growth_limit = "256m";
+        target_utilization = "0.46";
+        max_free = "48m";
+    } else { // (sys.totalram > 4096ull * 1024 * 1024)
+        // phone-xhdpi-6144-dalvik-heap.mk
+        start_size = "16m";
+        growth_limit = "256m";
+        target_utilization = "0.5";
+        max_free = "32m";
+    }
+
+    property_override("dalvik.vm.heapstartsize", start_size);
+    property_override("dalvik.vm.heapgrowthlimit", growth_limit);
+    property_override("dalvik.vm.heapsize", "512m");
+    property_override("dalvik.vm.heaptargetutilization", target_utilization);
+    property_override("dalvik.vm.heapminfree", "8m");
+    property_override("dalvik.vm.heapmaxfree", max_free);
+}
+
 void vendor_load_properties()
 {
     search_variant(variants);
+    load_dalvik_heap_properties();
 }
