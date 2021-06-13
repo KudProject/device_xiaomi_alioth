@@ -45,6 +45,11 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 # Overlays
+PRODUCT_PACKAGES += \
+    WifiOverlayK11AC \
+    WifiOverlayK11AG \
+    WifiOverlayK11AI
+
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
