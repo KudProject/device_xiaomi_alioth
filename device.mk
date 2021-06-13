@@ -46,6 +46,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    SystemUIOverlayK11A \
     WifiOverlayK11AC \
     WifiOverlayK11AG \
     WifiOverlayK11AI
