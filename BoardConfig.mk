@@ -31,6 +31,10 @@ AB_OTA_PARTITIONS += \
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# HIDL
+ODM_MANIFEST_SKUS += pro
+ODM_MANIFEST_PRO_FILES := $(DEVICE_PATH)/configs/vintf/manifest_pro.xml
+
 # Kernel
 TARGET_KERNEL_CONFIG := vendor/alioth_defconfig
 
