@@ -11,4 +11,15 @@
          Max((status bar content height + waterfall top size), top cutout size) -->
     <!-- for 29dp of height at ~2.73px/dp at default density -->
     <dimen name="status_bar_height_portrait">80px</dimen>
+
+    <!-- Default radius of the software rounded corners. -->
+    <!-- for 43dp of radius at ~2.73px/dp at default density -->
+    <dimen name="rounded_corner_radius">118px</dimen>
+
+    <!-- Default adjustment for the software rounded corners since corners are not perfectly
+        round. This value is used when retrieving the "radius" of the rounded corner in cases
+        where the exact bezier curve cannot be retrieved.  This value will be subtracted from
+        rounded_corner_radius to more accurately provide a "radius" for the rounded corner. -->
+    <!-- for 4dp of radius at ~2.73px/dp at default density -->
+    <dimen name="rounded_corner_radius_adjustment">11px</dimen>
 </resources>
