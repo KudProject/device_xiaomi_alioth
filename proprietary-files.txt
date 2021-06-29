@@ -360,10 +360,9 @@ vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 
-# Display calibration
-vendor/etc/mdss_dsi_k11a_38_08_0a_dsc_cmd_mi.xml
-vendor/etc/ltm_config_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml
-vendor/etc/qdcm_calib_data_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml
+# Display calibration - from hentai_alioth-Rika-ota-rq3a.210605.005-Furry.06251756
+vendor/etc/ltm_config_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml|604244bcfa2dd8fa3f7852349efa15c299987c60
+vendor/etc/qdcm_calib_data_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml|d29a6c7d6befd5dbf8904eacb3e93368c60c6b8e
 
 # Fingerprint
 -vendor/etc/vintf/manifest/manifest_fpc.xml
