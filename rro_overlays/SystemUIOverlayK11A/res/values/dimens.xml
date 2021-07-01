@@ -7,13 +7,6 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds.  Do not translate. -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- the padding on the start of the statusbar -->
-    <!-- for 14dp of padding at ~2.73px/dp at default density -->
-    <dimen name="status_bar_padding_start">38px</dimen>
-
-    <!-- the padding on the end of the statusbar -->
-    <dimen name="status_bar_padding_end">@dimen/status_bar_padding_start</dimen>
-
     <!-- the padding on the top of the statusbar (usually 0) -->
     <!-- for 8dp of padding at ~2.73px/dp at default density -->
     <dimen name="status_bar_padding_top">22px</dimen>
@@ -21,4 +14,8 @@
     <!-- Margin on the right side of the system icon group on Keyguard. -->
     <!-- for 8dp of padding at ~2.73px/dp at default density -->
     <dimen name="system_icons_keyguard_padding_end">22px</dimen>
+
+    <!-- The absolute side margins of quick settings -->
+    <!-- for 14dp of padding at 2.73px/dp at default density -->
+    <dimen name="rounded_corner_content_padding">38px</dimen>
 </resources>
