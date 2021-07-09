@@ -46,13 +46,12 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    FrameworkResOverlayK11A \
+    SettingsOverlayK11A \
     SystemUIOverlayK11A \
     WifiOverlayK11AC \
     WifiOverlayK11AG \
     WifiOverlayK11AI
-
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
