@@ -35,6 +35,10 @@ TARGET_SCREEN_DENSITY := 440
 ODM_MANIFEST_SKUS += pro
 ODM_MANIFEST_PRO_FILES := $(DEVICE_PATH)/configs/vintf/manifest_pro.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_alioth
+TARGET_RECOVERY_DEVICE_MODULES := libinit_alioth
+
 # Kernel
 TARGET_KERNEL_CONFIG := vendor/alioth_defconfig
 
