@@ -391,6 +391,14 @@ vendor/lib64/libdlbdsservice.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
+# Media (Dolby) - from OnePlus7TPro-user 11 RKQ1.201022.002 2105071700 release-keys
+system_ext/etc/permissions/com.dolby.daxservice.xml:system_ext/etc/permissions/privapp-permissions-com.dolby.daxservice.xml|cdd700ce16303ff2baa41eac44ed779f545db418
+-system_ext/priv-app/daxService/daxService.apk;OVERRIDES=MusicFX;platform|ed1de719afc7181a7e896e0eeaf14edc00761c21
+
+# Media (Dolby) - from OnePlus8-user 10 QKQ1.191222.001 2008080048 release-keys
+system/etc/permissions/privapp-com.dolby.daxappui.xml:system_ext/etc/permissions/privapp-permissions-com.dolby.daxappui.xml|b783016728b17eadfcdad662ccaf546afbeab856
+-system/priv-app/DaxUI/DaxUI.apk:system_ext/priv-app/DaxUI/DaxUI.apk|6e9c532492d4371d0ddc203abdf858a5c7991091
+
 # Media (stagefright)
 vendor/lib/libdeccfg.so
 vendor/lib/libstagefrightdolby.so
