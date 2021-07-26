@@ -41,6 +41,10 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_alioth
 
 # Kernel
 TARGET_KERNEL_CONFIG := vendor/alioth_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
+ifeq ($(wildcard $(TARGET_KERNEL_SOURCE)/arch/arm64/boot/dts/vendor/Makefile),)
+include $(DEVICE_PATH)-kernel/BoardConfigKernel.mk
+endif
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
