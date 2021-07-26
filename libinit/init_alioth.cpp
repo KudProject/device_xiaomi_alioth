@@ -87,6 +87,11 @@ static void load_dalvik_heap_properties()
 
 void vendor_load_properties()
 {
+    std::string pixel_fp = "google/redfin/redfin:11/RQ3A.210705.001/7380771:user/release-keys";
+
     search_variant(variants);
     load_dalvik_heap_properties();
+    // use Pixel build fingerprint
+    set_ro_build_prop("fingerprint", pixel_fp);
+    property_override("ro.bootimage.build.fingerprint", pixel_fp.c_str());
 }
