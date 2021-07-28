@@ -28,6 +28,10 @@ AB_OTA_PARTITIONS += \
     vendor \
     vendor_boot
 
+# Assert
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+TARGET_OTA_ASSERT_DEVICE := alioth,aliothin
+
 # Display
 TARGET_SCREEN_DENSITY := 400
 
