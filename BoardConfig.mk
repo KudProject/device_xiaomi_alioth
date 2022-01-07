@@ -20,6 +20,7 @@ DEVICE_PATH := device/xiaomi/alioth
 include build/make/target/board/BoardConfigMainlineCommon.mk
 include build/make/target/board/BoardConfigPixelCommon.mk
 
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
@@ -36,6 +37,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 endif
 
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -118,6 +120,7 @@ endif
 TARGET_NO_RECOVERY := true
 
 # Sepolicy
+TARGET_SEPOLICY_DIR := kona
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_M4DEFS += \
