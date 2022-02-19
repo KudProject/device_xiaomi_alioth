@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright 2018 The Android Open Source Project
+     Copyright (C) 2021 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,6 +15,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Whether to show a preference item for regulatory information in About phone -->
-    <bool name="config_show_regulatory_info">true</bool>
+    <!-- Whether usage of the proximity sensor during doze is supported -->
+    <bool name="doze_proximity_sensor_supported">false</bool>
 </resources>

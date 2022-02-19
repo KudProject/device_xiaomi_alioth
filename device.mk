@@ -43,7 +43,8 @@ BOARD_SHIPPING_API_LEVEL := 30
 
 # Device Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-derp
 
 # Enable Dynamic Paritions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
