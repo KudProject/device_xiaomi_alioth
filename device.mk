@@ -44,7 +44,8 @@ BOARD_SHIPPING_API_LEVEL := 30
 
 # Device Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-derp
 
 PRODUCT_PACKAGES += \
     SettingsProviderM2012K11AC \

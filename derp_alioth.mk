@@ -38,8 +38,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common DerpFest stuff.
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 
@@ -48,7 +48,7 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
-PRODUCT_NAME := lineage_alioth
+PRODUCT_NAME := derp_alioth
 PRODUCT_DEVICE := alioth
 PRODUCT_MODEL := M2012K11AG
 
