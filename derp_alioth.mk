@@ -15,6 +15,11 @@
 # limitations under the License.
 #
 
+# This must be defined before inheriting mainline_system.mk to avoid
+# com.android.apex.cts.shim.v1_prebuilt from slipping into flattened build,
+# creating an unsupported configuration.
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 #
 # All components inherited here go to system image
 #
