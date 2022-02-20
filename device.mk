@@ -59,6 +59,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
+# Ensure updatable APEX is always disabled when shipping prebuilt vendor image
+# and system image is configured to use flattened APEX, to avoid an unsupported
+# configuration.
+ifeq ($(OVERRIDE_TARGET_FLATTEN_APEX),true)
+#ifneq ($(BOARD_PREBUILT_VENDORIMAGE),)
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.apex.updatable=false
+#endif
+endif
+
 # Enable reboot free DSDS
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.radio.reboot_on_modem_change=false
