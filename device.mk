@@ -26,8 +26,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel
 
-include build/make/target/product/iorap_large_memory_config.mk
-
 # Enable VAB compression
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 
@@ -59,7 +57,6 @@ PRODUCT_PACKAGES += \
 
 # Enable Dynamic Paritions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
 # Ship R VNDK packages into system_ext image
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
@@ -174,7 +171,6 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 PRODUCT_PACKAGES += \
-    linker.vendor_ramdisk \
     tune2fs.vendor_ramdisk \
     resize2fs.vendor_ramdisk
 
@@ -220,4 +216,3 @@ PRODUCT_COPY_FILES += \
 BOARD_BUILD_VENDOR_RAMDISK_IMAGE := true
 
 $(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
