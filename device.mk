@@ -59,6 +59,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
+# Ship R VNDK packages into system_ext image
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
+
 # Ensure updatable APEX is always disabled when shipping prebuilt vendor image
 # and system image is configured to use flattened APEX, to avoid an unsupported
 # configuration.
