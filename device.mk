@@ -144,6 +144,10 @@ PRODUCT_PACKAGES += \
     ConnectivityOverlayGourami \
     HbmSVManagerGourami
 
+PRODUCT_PACKAGES += \
+    FrameworkResOverlayKudK11A \
+    SystemUIOverlayKudK11A
+
 # Hotword Enrollment
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
