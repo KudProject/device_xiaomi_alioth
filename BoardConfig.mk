@@ -42,6 +42,10 @@ TARGET_OTA_ASSERT_DEVICE := alioth
 # Board Info
 TARGET_BOARD_INFO_FILE := device/xiaomi/alioth/board-info.txt
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_alioth
+TARGET_RECOVERY_DEVICE_MODULES := libinit_alioth
+
 # Kernel
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 printk.devkmsg=on
 BOARD_KERNEL_CMDLINE += androidboot.hardware=gourami androidboot.hardware.platform=sm8250
