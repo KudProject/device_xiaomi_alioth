@@ -61,6 +61,13 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Ship R VNDK packages into system_ext image
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
+# Google Revenue Share
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.com.google.clientidbase.ms=android-xiaomi-rvo3 \
+    ro.com.google.clientidbase.vs=android-xiaomi-rvo3 \
+    ro.com.google.clientidbase.tx=android-xiaomi-rvo3 \
+    ro.com.google.clientidbase.ax=android-xiaomi-rvo3
+
 # Ensure updatable APEX is always disabled when shipping prebuilt vendor image
 # and system image is configured to use flattened APEX, to avoid an unsupported
 # configuration.
