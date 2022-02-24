@@ -24,8 +24,19 @@ void property_override(char const prop[], char const value[])
 }
 
 #define MAX_PROP_LIST 8
-void property_override_multiple(std::string type, char const value[])
+void property_override_multiple(std::string type, char const value[], bool is_product)
 {
+    const std::string build_prop_list[MAX_PROP_LIST] = {
+        "ro.bootimage.build.",
+        "ro.build.",
+        "ro.odm.build.",
+        "ro.product.build.",
+        "ro.system.build.",
+        "ro.system_ext.build.",
+        "ro.vendor.build.",
+        "ro.vendor_dlkm.build.",
+    };
+
     const std::string product_prop_list[MAX_PROP_LIST] = {
         "ro.product.",
         "ro.product.bootimage.",
@@ -37,14 +48,20 @@ void property_override_multiple(std::string type, char const value[])
         "ro.product.vendor_dlkm.",
     };
 
-    for (int i = 0; i < MAX_PROP_LIST; i++)
-        property_override((char *)&(product_prop_list[i] + type)[0], value);
+    for (int i = 0; i < MAX_PROP_LIST; i++) {
+        if (is_product)
+            property_override((char *)&(product_prop_list[i] + type)[0], value);
+        else
+            property_override((char *)&(build_prop_list[i] + type)[0], value);
+    }
 }
 
 void vendor_load_properties()
 {
     std::string region = android::base::GetProperty("ro.boot.hwc", "");
     char const *brand, *device, *marketname, *model, *name;
+    char const *description = "alioth-user 12 RKQ1.200826.002 V13.0.3.0.SKHCNXM release-keys";
+    char const *fingerprint = "Redmi/alioth/alioth:12/RKQ1.200826.002/V13.0.3.0.SKHCNXM:user/release-keys";
 
     if (region == "CN") {
         brand = "Redmi";
@@ -66,9 +83,12 @@ void vendor_load_properties()
         name = "aliothin";
     }
 
-    property_override_multiple("brand", brand);
-    property_override_multiple("device", device);
-    property_override_multiple("marketname", marketname);
-    property_override_multiple("model", model);
-    property_override_multiple("name", name);
+    property_override_multiple("brand", brand, true);
+    property_override_multiple("device", device, true);
+    property_override_multiple("marketname", marketname, true);
+    property_override_multiple("model", model, true);
+    property_override_multiple("name", name, true);
+
+    property_override_multiple("description", description, false);
+    property_override_multiple("fingerprint", fingerprint, false);
 }
