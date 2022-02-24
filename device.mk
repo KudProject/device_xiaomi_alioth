@@ -60,6 +60,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 #endif
 endif
 
+# Screen Density
+#ifneq ($(BOARD_PREBUILT_VENDORIMAGE),)
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.sf.lcd_density=400
+#endif
+
 # Enable reboot free DSDS
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.radio.reboot_on_modem_change=false
