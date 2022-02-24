@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2022 KudProject Development
+  ~
+  ~ SPDX-License-Identifier: Apache-2.0
+ -->
+<resources>
+    <!-- the padding on the top of the statusbar (usually 0) -->
+    <!-- for 7dp of padding at ~2.73px/dp at default density -->
+    <dimen name="status_bar_padding_top">19px</dimen>
+</resources>

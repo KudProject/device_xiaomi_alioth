@@ -1,0 +1,13 @@
+// Copyright (C) 2021 KudProject Development
+//
+// SPDX-License-Identifier: Apache-2.0
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+runtime_resource_overlay {
+    name: "FrameworkResOverlayKudK11A",
+    sdk_version: "current",
+    product_specific: true,
+}
