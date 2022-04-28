@@ -63,6 +63,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="alioth_global-user 11 RKQ1.200826.002 V12.5.7.0.RKHINXM release-keys"
+    PRIVATE_BUILD_DESC="alioth-user 12 SP2A.220405.003 20220404 release-keys"
 
-BUILD_FINGERPRINT := Redmi/alioth/alioth:11/RKQ1.200826.002/V12.5.7.0.RKHINXM:user/release-keys
+BUILD_FINGERPRINT := Redmi/alioth/alioth:12/SP2A.220405.003/20220404:user/release-keys
