@@ -60,8 +60,8 @@ void vendor_load_properties()
 {
     std::string region = android::base::GetProperty("ro.boot.hwc", "");
     char const *brand, *device, *marketname, *model, *name;
-    char const *description = "alioth-user 12 RKQ1.200826.002 V13.0.3.0.SKHCNXM release-keys";
-    char const *fingerprint = "Redmi/alioth/alioth:12/RKQ1.200826.002/V13.0.3.0.SKHCNXM:user/release-keys";
+    char const *description = "alioth-user 12 RKQ1.200826.002 V13.0.5.0.SKHCNXM release-keys";
+    char const *fingerprint = "Redmi/alioth/alioth:12/RKQ1.200826.002/V13.0.5.0.SKHCNXM:user/release-keys";
 
     if (region == "CN") {
         brand = "Redmi";
