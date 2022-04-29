@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2022 KudProject Development
+  ~ Copyright (C) 2022 DerpFest
+  ~
+  ~ SPDX-License-Identifier: Apache-2.0
+ -->
+<resources>
+    <!-- Height of the status bar header bar when on Keyguard -->
+    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height_landscape</dimen>
+</resources>

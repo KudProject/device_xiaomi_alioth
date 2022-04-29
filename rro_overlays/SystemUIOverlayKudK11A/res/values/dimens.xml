@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (C) 2022 KudProject Development
+  ~ Copyright (C) 2022 DerpFest
   ~
   ~ SPDX-License-Identifier: Apache-2.0
  -->
@@ -8,4 +9,7 @@
     <!-- the padding on the top of the statusbar (usually 0) -->
     <!-- for 7dp of padding at ~2.73px/dp at default density -->
     <dimen name="status_bar_padding_top">19px</dimen>
+
+    <!-- Height of the status bar header bar when on Keyguard -->
+    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height_portrait</dimen>
 </resources>
