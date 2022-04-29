@@ -91,4 +91,8 @@ void vendor_load_properties()
 
     property_override_multiple("description", description, false);
     property_override_multiple("fingerprint", fingerprint, false);
+
+    // Keyboard height ratio and bottom padding in dp for portrait mode
+    property_override("ro.com.google.ime.height_ratio", "1.0");
+    property_override("ro.com.google.ime.kb_pad_port_b", "14.4");
 }
