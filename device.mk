@@ -62,7 +62,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
 # Google Revenue Share
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     ro.com.google.clientidbase.ms=android-xiaomi-rvo3 \
     ro.com.google.clientidbase.vs=android-xiaomi-rvo3 \
     ro.com.google.clientidbase.tx=android-xiaomi-rvo3 \
