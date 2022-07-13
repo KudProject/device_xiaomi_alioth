@@ -60,6 +60,6 @@ PRODUCT_MODEL := K40
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="alioth-user 12 SQ3A.220605.009.A1 8643238 release-keys"
+    PRIVATE_BUILD_DESC="alioth-user 12 SQ3A.220705.003.A1 20220707 release-keys"
 
-BUILD_FINGERPRINT := Redmi/alioth/alioth:12/SQ3A.220605.009.A1/8643238:user/release-keys
+BUILD_FINGERPRINT := Redmi/alioth/alioth:12/SQ3A.220705.003.A1/20220707:user/release-keys
